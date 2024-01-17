@@ -1,0 +1,100 @@
+.loggedinas {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 10vh auto
+}
+
+.loggedinas span, .loggedinas a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(63, 106, 136, 0.4);
+    padding: 10px 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.loggedinas span:hover, .loggedinas a:hover {
+    background-color: #3f6f90d5;
+}
+
+.login_body {
+    margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+    margin-right: auto;
+    padding: 20px; /*pour espacer*/
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#question_form {
+    font-size: 20px;
+    padding-top: 3%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.question_area {
+    background-color: #ffffffaa;
+    border-radius: 20px;
+    border: solid;
+    border-width: 2px;
+    color : rgb(54, 46, 159);
+}
+
+.question_area h2 {
+    top: 0;
+    left: 0;
+    padding-left: 3%;
+    padding-top: 5px;
+    margin:-2px;
+    padding-bottom: 5px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.question_area form button {
+    font-size: 20px;
+    height: 30px;
+    width: 200px;
+    color : rgb(54, 46, 159);
+}
+
+.answer_container {
+    padding-left: 4%;
+}
+
+.answer_container {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 25fr;
+    color : rgb(54, 46, 159);
+}
+
+
+#progress_bar {
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 80%;
+    height: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #aaaaaa;
+}
+
+#progression {
+    height: 30px;
+    border-radius: 10px;
+    display: inline-block;
+    background: linear-gradient(0.25turn, #00bb00, #00ee00);
+}
+
+#progression div {
+    text-align: center;
+    padding-top: 5px;
+}

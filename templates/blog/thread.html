@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>OPtimise - BLOG</title>
+    <link rel="stylesheet" href="/static/blog/style.css">
+    <link rel="icon" href="/static/assets/icon.png">
+</head>
+<body>
+    <!-- barre latérale gauche -->
+
+    <div class="blog_body">
+        <div class="topmessage">
+            <img src="/static/assets/icon.png" alt="icone">
+            <p>Historique de conversation sur le produit '<!-- product -->', de '<!-- firm -->' :</p>
+        </div>
+        <!-- sysmsg -->
+
+        <div class="haut">
+            <a class="back" href="/blog"><button>
+                <img src="/static/blog/assets/left_arrow.png" alt="Retour au blog">
+            </button></a>
+            <form action="/blog/search" method="POST">
+                <label>
+                    <input class="search_bar" type="text" placeholder="Rechercher un mot-clé..." name="search_query">
+                </label>
+                <button type="submit"><img src="/static/blog/assets/rechercher.png" alt="Rechercher"></button>
+            </form>
+            <div class="small_blank"></div>
+        </div>
+
+        <!-- post here -->
+
+        <div class="small_blank"></div>
+
+        <!-- replies here -->
+
+        <div class="small_blank"></div><div class="small_blank"></div>
+        <div id="add_reply" class="review reply_review">
+            <p class="your_comment">Rejoignez la dicussion ici !</p>
+
+            <div class="small_blank"></div>
+
+            <form action="/blog/thread/<!-- postid -->" method="POST">
+                <label for="content_input"></label>
+                <textarea id="content_input" name="content"
+                          placeholder="Votre réponse"></textarea>
+                <div class="small_blank"></div>
+                <label for="submit_reply"></label>
+                <input id="submit_reply" type="submit" value="Commenter">
+            </form>
+        </div>
+
+    </div>
+
+<script>
+function drop(postid) {
+  document.getElementById("hamburger-" + postid).classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

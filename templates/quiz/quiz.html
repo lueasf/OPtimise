@@ -1,0 +1,102 @@
+    <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" /> <!--l'encodage-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="{{url_for('static',filename='quiz/css/style.css') }}">
+        <link rel="stylesheet" href="{{url_for('static',filename='quiz/css/style_quiz.css') }}">
+        <title>OPtimise</title>
+    </head>
+    <body>
+
+        <div id="content">
+            <header>
+                <img src="{{url_for('static',filename='quiz/images/logo.png') }}" alt="Logo de votre site" id="logo" />
+                <h1>OPtimise, Tout sur l'Obsolescence Programmée !</h1>
+            </header>
+            <main>
+    
+                <nav> <!--barre latérale gauche-->
+                    {% if name %}
+                        <div class='loggedinas'>
+                            <span>Logged in as <br><b>{{name}}</b></span>
+                            <a href='/logout'>Log out</a>
+                        </div>
+                    {% else %}
+                        <div class='loggedinas'>
+                            <a href='/login'><b>Log in</b></a>
+                            <a href='/signup'><b>Sign up</b></a>
+                        </div>
+                    {% endif %}
+                    <ul>
+                      <li><a href="/quiz">Quizz</a></li>
+                      <li><a href="/classement/entreprise">Classements</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                      <li><a href="/marketplace">Shopping</a></li>
+                      <li><a href="/">Autre ressources</a></li>
+                    </ul>
+                  </nav>
+
+                <h1>Quiz</h1>
+
+                <!-- Texte d'introduction au quiz -->
+                <h2>Bienvenue dans le Quiz sur l'Obsolescence Programmée !</h2>
+                <p>Êtes-vous curieux de découvrir à quel point vous connaissez le concept complexe
+                de l'obsolescence programmée? Testez vos connaissances avec notre quiz interactif et plongez-vous
+                dans le monde où la durée de vie des produits est délibérément limitée.</p>                        
+                <br/>
+
+                <h2>À propos du quiz :</h2>
+                <p>L'obsolescence programmée est un sujet fascinant qui suscite de nombreuses discussions sur 
+                la durabilité, la consommation responsable et l'impact environnemental. Ce quiz couvre une gamme de
+                questions, des bases du concept aux implications économiques et écologiques.</p>    
+                <br/>
+                
+                <h2>Comment ça fonctionne :</h2>
+                <p>--- Le quiz est composé de questions à choix multiples.</p>
+                <p>--- Sélectionnez la réponse qui, selon vous, est correcte.</p>
+                <p>--- À la fin du quiz, découvrez votre score et comparez le à celui des autres.</p>
+                <br/>
+
+                <h2>Pourquoi participer :</h2>
+                <p>--- Testez vos connaissances sur un sujet d'actualité.</p>
+                <p>--- Découvrez les différentes facettes de l'obsolescence programmée.</p>
+                <p>--- Sensibilisez-vous aux enjeux liés à la consommation et à la durabilité.</p>                 
+                <br/><br/>
+                    
+                <p>Prêt à commencer ? Choisisez le nombre de questions, cliquez sur "Démarrer le Quiz" 
+                et mesurez votre compréhension de l'obsolescence programmée!</p>
+                <br/><br/><br/><br/>
+
+                <!-- Menu de selection des parametres du quiz -->
+                <div class="main_box">
+                    <form method="POST" action="">
+                        <label for="question_max">Nombre de Questions :</label>
+                            <select name="question_max" id="question_max">
+                            <option value=5>5 Questions</option>
+                            <option value=10>10 Questions</option>
+                            <option value=20>20 Questions</option>
+                            <option value=40>40 Questions</option>
+                        </select>
+                        <div></div>
+                        <button type="submit">Démarrer le Quiz</button>
+                    </form>
+                </div>
+                <br/><br/><br/>
+
+                <footer>
+                    <div class="bottom-bar">
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="aide.html">Aide</a></li>
+                            <li><a href="dons.html">Dons</a></li>
+                            <li><a href="vieprivee.html">Vie privée</a></li>
+                        </ul>
+                    </div>
+                    <p>&copy; 2023  Tous droits réservés.</p>
+                </footer>
+
+            </main>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>OPtimise - BLOG</title>
+    <link rel="stylesheet" href="/static/blog/style.css">
+    <link rel="icon" href="/static/assets/icon.png">
+</head>
+<body>
+    <!-- barre latérale gauche -->
+
+    <div class="blog_body">
+        <div class="topmessage">
+            <img src="/static/assets/icon.png" alt="icone">
+            <p>Envie de partager un feedback sur un produit ? Rédigez un post !</p>
+        </div>
+        <!-- sysmsg -->
+
+        <div class="haut">
+            <a class="<!-- banhammer button class -->" href="/blog/moderate"><button>
+                    <img src="/static/blog/assets/banhammer.png" alt="Modérer">
+            </button></a>
+            <form action="/blog/search" method="POST">
+                <label>
+                    <input class="search_bar" type="text" placeholder="Rechercher un mot-clé..." name="search_query">
+                </label>
+                <button type="submit"><img src="/static/blog/assets/rechercher.png" alt="Rechercher"></button>
+            </form>
+
+            <div class="small_blank"></div>
+
+            <a class="write" href="/blog/write"><button>
+                <img src="/static/blog/assets/rediger.png" alt="Rédiger">
+            </button></a>
+        </div>
+
+        <!-- posts here -->
+
+    </div>
+
+
+<script>
+function drop(postid) {
+  document.getElementById("hamburger-" + postid).classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

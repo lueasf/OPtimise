@@ -1,0 +1,156 @@
+body {
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../assets/cloud.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+nav { /* barre latérale gauche */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(72, 93, 97); /* Couleur de fond de la barre latérale */
+    padding-top: 140px; /* Espace en haut de la barre latérale */
+}
+
+nav ul {
+    list-style: none;
+    padding:0;
+    margin-left: 20px;
+} /*pour enlever les petis points moches en centrer le texte*/
+
+nav ul li {
+    margin-bottom: 10px;
+} /*pour espacer les catégories*/
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #3f6f90d5;
+    /*Couleur de fond au survol des liens*/
+}
+
+.loggedinas {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 10vh auto
+}
+
+.loggedinas span, .loggedinas a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(63, 106, 136, 0.4);
+    padding: 10px 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.loggedinas span:hover, .loggedinas a:hover {
+    background-color: #3f6f90d5;
+}
+
+.login_body {
+    margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+    margin-right: auto;
+    padding: 20px; /*pour espacer*/
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.slim {
+    width: max-content;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: auto;
+    background-color: rgba(49, 51, 56, 0.45);
+    border-radius: 25px;
+}
+
+.form_entry {
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
+
+input[type="text"], input[type="password"] {
+    width: 300px;
+    margin: 17px 90px 20px 0;
+    padding: 3px 0;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 5px 20px;
+    margin: auto;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+label {
+    width: max-content;
+    height: max-content;
+    margin: 20px 10px 0 0;
+    color: #181818;
+}
+
+.blank {
+    height: 50px;
+}
+
+.error {
+    margin: auto;
+    padding: 30px;
+    color: #ef2a2c;
+}
+
+p {
+    width: max-content;
+    margin: 20px auto;
+}
+
+.topmessage {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.topmessage p {
+    font-size: 20px;
+    width: max-content;
+    margin: auto;
+}
+
+.topmessage img {
+    width: 100px;
+    height: 100px;
+}
+
+ {
+    border: 1px dashed #ff1e00;
+}

@@ -1,0 +1,171 @@
+.loggedinas {
+  display: flex;
+  flex-direction: column;
+  margin: auto auto 10vh auto
+}
+
+.loggedinas span, .loggedinas a {
+  text-decoration: none;
+  color: #fff;
+  background-color: rgba(63, 106, 136, 0.4);
+  padding: 10px 3px;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 5px;
+  width: 90%;
+  text-align: center;
+}
+
+.loggedinas span:hover, .loggedinas a:hover {
+  background-color: #3f6f90d5;
+}
+
+.login_body {
+  margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+  margin-right: auto;
+  padding: 20px; /*pour espacer*/
+  display: flex;
+  flex-direction: column;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+.section-step {
+  border-radius: 0.25em; 
+  box-shadow: 0 0 0 1px #157db9; 
+}
+
+table { border: none; border-collapse: collapse; }
+table td { border-left: 1px solid #157db9; }
+table td:first-child { border-left: none; }
+
+.table {
+  border-spacing: 0;
+  text-align: center;
+}
+
+h1 {
+    font-family: 'Courier New' ;
+    margin-left: 80px;
+    font-size: 50px;
+    color: rgb(24, 23, 23); /*couleur du titre*/
+}
+
+p { 
+  
+    font-size: 20px;
+    color : rgb(54, 46, 159); /*couleur du petit texte*/
+}
+td { 
+  
+    font-size: 20px;
+    color : rgb(54, 46, 159); /*couleur du petit texte*/
+}
+th { 
+  
+    font-size: 20px;
+    color : rgb(54, 46, 159); /*couleur du petit texte*/
+}
+body {
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('../pictures/pexels-miguel-á-padriñán-19670.jpg');
+    /* Centrer et redimensionner l'image de fond */
+    background-size: cover;
+    /* Répéter l'image de fond si nécessaire */
+    background-repeat: no-repeat;
+  } /*pour la police d'écriture de corps de texte et l'image*/
+  
+  #content {
+    margin-left: 80px;
+    margin-right: 90px;
+    padding: 20px;
+  }
+
+  .bottom-bar {
+    border-radius: 75px;
+    background-color :rgb(72, 93, 97);
+    color : white;
+    padding : 10px 0;
+  }
+
+  .bottom-bar li {
+    margin: 0 10px; /* Espacement entre les liens */
+  }
+  
+  .bottom-bar a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .bottom-bar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centrer les éléments */
+    display: flex; /* Utiliser Flexbox pour aligner horizontalement */
+    justify-content: center; /* Centrer les éléments horizontalement */
+  }
+  .a { 
+  
+    font-size: 20px;
+    color : rgb(54, 46, 159); /*couleur du petit texte*/
+  }
+  
+  header {
+    display: flex;
+    align-items: center;
+  }
+  
+  #logo {
+    width: 150px;  /* taille du logo */
+    margin-top: 20px;
+    margin-left: 180px;
+  }
+  
+  nav { /* barre latérale gauche */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px; 
+    height: 100%;
+    background-color: rgb(72, 93, 97); /* Couleur de fond de la barre latérale */
+    padding-top: 140px; /* Espace en haut de la barre latérale */
+  }
+  
+  ul {
+    list-style: none;
+    padding:0;
+    margin-left: 20px;
+  } /*pour enlever les petis points moches en centrer le texte*/
+  
+  li {
+    margin-bottom: 10px;
+  } /*pour espacer les catégories*/
+  
+  a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  a:hover { 
+    background-color: #3f6f90d5;
+    /*Couleur de fond au survol des liens*/
+  }
+  
+
+  main {
+    margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+    margin-right: auto;
+    padding: 20px; /*pour espacer*/
+  }
+
+  footer {
+    margin-top: 30px;
+    margin-bottom: 60px;
+  }

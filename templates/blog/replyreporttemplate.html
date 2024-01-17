@@ -1,0 +1,29 @@
+<div class="blank"></div>
+
+<div class="reply">
+    <div class="reply_banner">
+        <div class="reply_info">
+            <span class="sysmsg">Signalement d'une réponse par <!-- reporter --> :</span>
+            <div class="small_blank"></div>
+            <span class="author_date">par <!-- author -->, le <!-- date --></span>
+        </div>
+        <div class="dropdown">
+            <button onclick="drop(<!-- replyid -->)" class="drop_button">
+                <img src="/static/blog/assets/hamburger.png" alt="hamburger.png">
+            </button>
+            <div id="hamburger-<!-- replyid -->" class="dropdown_content">
+                <form>
+                    <button formaction="/blog" type="submit" name="action"
+                            value="report_reply_ignore-<!-- postid -->-<!-- replyid -->" formmethod="POST">Ignorer</button>
+                    <button formaction="/blog" type="submit" name="action"
+                            value="report_reply_delete-<!-- postid -->-<!-- replyid -->" formmethod="POST">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="reply_content"><!-- content --></p>
+</div>
+
+<div class="small_blank"></div>
+
+<a class="<!-- replies button class -->" href="/blog/thread/<!-- postid -->">Voir le thread de <!-- repliescount --> réponses</a>

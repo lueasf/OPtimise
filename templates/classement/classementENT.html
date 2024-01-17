@@ -1,0 +1,87 @@
+<!--PAGE D'ACCUEIL DU SITE-->
+
+<!DOCTYPE html>
+<html lang="fr"> <!--la langue-->
+
+<head>
+  <meta charset="UTF-8" /> <!--l'encodage-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='classement/styles/style.css') }}" /> <!--pour lier la page css-->
+  <title> OPtimise </title> <!--le titre de l'onglet -->
+</head>
+
+<body class="background-image">
+    <div id="content">
+        <header>
+          <img src="{{ url_for('static',filename='classement/pictures/mylo.png') }}" alt="Logo de votre site" id="logo" /> <!--on insere un png du logo-->
+          <h1>OPtimise, Tout sur l'Obsolescence Programmée !</h1>
+        </header>
+    <main>
+
+      <nav> <!--barre latérale gauche-->
+        {% if name %}
+            <div class='loggedinas'>
+                <span>Logged in as <br><b>{{name}}</b></span>
+                <a href='/logout'>Log out</a>
+            </div>
+        {% else %}
+            <div class='loggedinas'>
+                <a href='/login'><b>Log in</b></a>
+                <a href='/signup'><b>Sign up</b></a>
+            </div>
+        {% endif %}
+        <ul>
+          <li><a href="/quiz">Quizz</a></li>
+          <li><a href="/classement/entreprise">Classements</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/marketplace">Shopping</a></li>
+          <li><a href="/">Autre ressources</a></li>
+        </ul>
+      </nav>
+  
+  <table class = "table"> <!--création du tableau-->
+  <thead>
+    <tr>
+      <th colspan="3">Classement par entreprise</th> <!--titre-->
+    </tr>
+  </thead>
+  <tbody class="section section-step">
+    <tr>
+      <td><a class="a" href = "/classement/entreprise">Entreprise</a></td> <!--titre des colonnes-->
+      <td><a class="a" href = "/classement/produit">Produit(s)</td> <!--titre des colonnes-->
+      <td>Note</td> <!--titre des colonnes-->
+    </tr>
+    {%for i in range(0, len1)%} <!--début de la boucle sur les entreprises-->
+    <tr>
+      
+      <td>{{entreprisesaux[i]}}</td> <!--affichage du nom de l'E, de la note ainsi que d'un de ses produits-->
+      <td>{{produits[i][0]}}</td>
+      <td>{{notes[i]}}</td>
+      
+    </tr>
+    {%for j in range(1, len2[i])%} <!--boucle sur le nombre de produits afin d'afficher d'éventuels autres produits de l'E-->
+    <tr>
+    <td> </td>
+    <td>{{produits[i][j]}}</td> <!--affichage uniquement du produits dans chaque ligne-->
+    <td> </td>
+    </tr>
+    {%endfor%} <!--fin de la boucle sur les produits-->
+    {%endfor%} <!--fin de la boucle sur les E-->
+  </tbody>
+</table> <!--fin du tableau-->
+
+  <footer>
+    <div class="bottom-bar">
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="aide.html">Aide</a></li>
+        <li><a href="dons.html">Dons</a></li>
+        <li><a href="vieprivee.html">Vie privée</a></li>
+      </ul>
+    </div>
+          <p>&copy; 2023  Tous droits réservés.  </p>
+      </footer>
+    </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!--PAGE D'ACCUEIL DU SITE-->
+
+<!DOCTYPE html>
+<html lang="fr"> <!--la langue-->
+
+<head>
+  <meta charset="UTF-8" /> <!--l'encodage-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='classement/styles/style.css') }}" /> <!--pour lier la page css-->
+  <title> OPtimise </title> <!--le titre de l'onglet -->
+</head>
+
+<body class="background-image">
+    <div id="content">
+        <header>
+          <img src="{{ url_for('static',filename='classement/pictures/mylo.png') }}" alt="Logo de votre site" id="logo" /> <!--on insere un png du logo-->
+          <h1>OPtimise, Tout sur l'Obsolescence Programmée !</h1>
+        </header>
+    <main>
+
+  <nav> <!--barre latérale gauche-->
+    {% if name %}
+        <div class='loggedinas'>
+            <span>Logged in as <br><b>{{name}}</b></span>
+            <a href='/logout'>Log out</a>
+        </div>
+    {% else %}
+        <div class='loggedinas'>
+            <a href='/login'><b>Log in</b></a>
+            <a href='/signup'><b>Sign up</b></a>
+        </div>
+    {% endif %}
+    <ul>
+      <li><a href="/quiz">Quizz</a></li>
+      <li><a href="/classement/entreprise">Classements</a></li>
+      <li><a href="/blog">Blog</a></li>
+      <li><a href="/marketplace">Shopping</a></li>
+      <li><a href="/">Autre ressources</a></li>
+    </ul>
+  </nav>
+  <p>
+    Notre objectif est d'informer le grand public sur <mark>l'obsolescence programmée</mark>
+    et ses <mark>enjeux</mark>.<br></p>  <!--la balise marque permet de surligner des mots-->
+    
+   <p>La lutte contre l'obsolescence programmée
+L'obsolescence d'un produit, le fait qu'il devienne obsolète, 
+incite souvent son propriétaire à s'en débarrasser.
+L'obsolescence programmée a été définie dans l'article 99 de la 
+loi n° 2015-992 du 17 août 2015 relative à la transition énergétique 
+pour la <mark>croissance verte</mark> comme « l'ensemble des techniques par lesquelles 
+un metteur sur le marché vise à réduire délibérément la durée de 
+vie d'un produit pour en augmenter le taux de remplacement ». La 
+loi reconnaît le <mark>délit</mark> d'obsolescence programmée, qui est puni d'une 
+peine de deux ans d'emprisonnement et de 300 000 euros d'amende, le montant 
+de l'amende pouvant être porté à 5 % du chiffre d'affaires moyen annuel. <br> <br>
+Attention : il peut y avoir « obsolescence » sans que celle-ci soit 
+« programmée ». Ainsi convient-il de différencier l'obsolescence programmée 
+de l'obsolescence dite « fonctionnelle » et de l'obsolescence « d'évolution » :
+l'« obsolescence fonctionnelle » : le produit ne correspond plus aux 
+usages attendus d'un point de vue technique (exemple : incompatibilité 
+avec de nouveaux équipements), réglementaire et/ou économique.
+l'« obsolescence d'évolution » : le produit ne correspond plus aux 
+« envies » des consommateurs. Ce cas de figure correspond à ce qui 
+est communément appelé « effets de mode ». Ce type d ' obsolescence 
+peut être guidé par certains fabricants qui cherchent à augmenter     
+la fréquence de renouvellement de leurs produits.</p>
+  <p>
+    L'expression "obsolescence programmée" vient du latin obsolescere
+signifiant "tomber en désuétude". Selon Légifrance, il s'agit de « l'ensemble 
+des techniques par lesquelles le metteur 
+sur le marché d’un produit vise à en réduire délibérément
+la durée de vie pour en augmenter le taux de remplacement. »
+<br>
+<br>
+
+en 2012, l’Agence de l’environnement et de la maîtrise de l’énergie (Ademe) a défini 4 types de durée de vie :
+la durée de vie normative (durée de fonctionnement moyenne) ;
+la durée d’usage (durée pendant laquelle le produit est utilisé à proprement parler) ;
+la durée de détention totale (total des durées de détention auprès de différents utilisateurs) ;
+la durée d’existence (période entre la fin de fabrication et l'élimination, la valorisation énergétique ou le recyclage).
+
+<br>
+<br>
+
+L'obsolescence programmée peut se présenter sous quatre formes différentes : <br>
+
+l'obsolescence esthétique (c'est l'effet de mode, le produit perd en valeur au moment de la sortie d'un nouveau produit amélioré) ;
+l'obsolescence technique ou indirecte (l'appareil fonctionne mais son utilisation est compromise, car les composants ou les produits associés n'existent plus) ;
+l'obsolescence logicielle (une mise à jour obligatoire du logiciel d'utilisation s'avère incompatible avec les anciens modèles) ;
+l'obsolescence fonctionnelle (le produit ne répond plus aux usages permis par le progrès technique, une évolution réglementaire et/ou économique).
+
+L'obsolescence programmée concerne essentiellement 3 types de produits : <br>
+
+les produits électroménagers (machine à laver, lave-vaisselle, micro-ondes, réfrigérateur, etc.) pour lequel le coût de la réparation est plus élevé que le prix de l'appareil lui-même ; 
+les produits high-tech (smartphone, ordinateur, tablette, téléviseur ou encore enceinte) dont la durée de vie est généralement comprise entre 3 et 5 ans ;
+les voitures (particulièrement la batterie, les composants mécaniques et les appareils électroniques connectés qui justifient d'une longévité réduite).
+
+La première utilisation notable de l'obsolescence programmée remonte aux années 1920.
+<br>
+En 1932, un certain Bernard London propose cette technique pour relancer l'économie des États-Unis, où les effets de la crise de 1929 continuent 
+de se faire sentir. Selon lui, cette pratique stimule en effet la production et la consommation.
+Dans les années 1950, un designer américain, Brooks Stevens, en fait son fer de lance. Il popularise la notion de
+« tendance » en proposant régulièrement de nouveaux modèles au design inédit.
+<br>
+Depuis 2014, l'obsolescence programmée est considérée comme un délit par la loi Hamon. La loi de la transition énergétique pour la croissance
+verte de 2015 a aussi changé les choses.
+Elle reconnaît et punit l'obsolescence programmée :
+d'une peine de deux ans d'emprisonnement ;
+de 300 000 euros d'amende pour un individu ;
+d'une amende pouvant aller jusqu'à 5 % du chiffre d'affaires moyen annuel d'une entreprise.
+<br>
+Les smartphones contiennent pas moins de 70 composants, dont le cobalt ou le lithium (utilisé pour la conception des batteries). 
+Or, la surexploitation des matières premières rares engendre un épuisement de ces ressources limitées.
+Hélas, ces lourdes répercussions sur l'environnement ne s'arrêtent pas là : 
+contribution aux bouleversements climatiques ; 
+destruction des terres fertiles ; 
+diminution de la biodiversité.
+<br>
+<br>
+Selon l'organisation « Halte à l'obsolescence programmée » (HOP), l'allongement de la durée de vie 
+des équipements informatiques, de l'électroménager, du textile et de l'ameublement
+permettrait de diminuer les émissions annuelles françaises de 77 millions de tonnes de CO2.
+<br>
+
+En vue d'améliorer la durée de vie des appareils, la loi anti-gaspillage pour une économie circulaire a acté la mise en place
+d'un indice de réparabilité de certains produits électroniques et électriques au 1er janvier 2021 . 
+<br>
+
+Le caractère plus ou moins réparable de chaque bien est noté sur 10. Ceci prend en compte la disponibilité et le prix des pièces détachées, mais également 
+la démontabilité du produit, ou encore la disponibilité des conseils d'utilisation et d'entretien.
+<br>
+
+En 2024, cet indice devrait devenir « l'indice de durabilité » grâce à l'ajout de
+nouveaux critères, tels que la robustesse et la fiabilité des appareils.
+<br>
+
+L'éco-conception consiste à allonger la durée de vie d'un objet en le rendant plus robuste, réparable, facile à entretenir et adaptable aux évolutions technologiques. Évidemment, 
+il s'agit aussi de réduire son impact sur l'environnement (avec l'usage de matières recyclées notamment).
+Le fabricant optimise les étapes du cycle de vie de l'appareil pour le rendre plus écologique en : <br>
+    s'approvisionnant en matières premières recyclées et favoriser les circuits courts ; <br>
+    se fournissant en électricité verte pour produire sans impacter l'environnement ;<br>
+    distribuant les produits à l'aide de modes de transport doux ;  <br>
+    permettant un usage peu énergivore et polluant ;  <br>
+    garantissant le caractère recyclable des produits.  <br>
+
+  </p>
+
+  <footer>
+    <div class="bottom-bar">
+      <ul>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="aide.html">Aide</a></li>
+        <li><a href="dons.html">Dons</a></li>
+        <li><a href="vieprivee.html">Vie privée</a></li>
+      </ul>
+    </div>
+          <p>&copy; 2023  Tous droits réservés.  </p>
+      </footer>
+    </main>
+    </div>
+</body>
+</html>

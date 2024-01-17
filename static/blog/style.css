@@ -1,0 +1,309 @@
+body {
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url(../assets/cloud.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+nav { /* barre latérale gauche */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(72, 93, 97); /* Couleur de fond de la barre latérale */
+    padding-top: 140px; /* Espace en haut de la barre latérale */
+}
+
+nav ul {
+    list-style: none;
+    padding:0;
+    margin-left: 20px;
+} /*pour enlever les petis points moches en centrer le texte*/
+
+nav ul li {
+    margin-bottom: 10px;
+} /*pour espacer les catégories*/
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens */
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+nav ul li a[href="/blog"] {
+    background-color: #3f6f90d5;
+}
+
+nav ul li a:hover {
+    background-color: #3f6f90d5;
+    /*Couleur de fond au survol des liens*/
+}
+
+.loggedinas {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 10vh auto
+}
+
+.loggedinas span, .loggedinas a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(63, 106, 136, 0.4);
+    padding: 10px 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.loggedinas span:hover, .loggedinas a:hover {
+    background-color: #3f6f90d5;
+}
+
+.blog_body {
+    margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+    margin-right: auto;
+    padding: 20px; /*pour espacer*/
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+a {
+    cursor: pointer;
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    text-align: center;
+    font-size: 20px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+}
+
+.topmessage {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 100%;
+}
+
+.topmessage p {
+    width: max-content;
+    margin: auto;
+}
+
+.topmessage img {
+    width: 100px;
+    height: 100px;
+}
+
+.sysmsg {
+    color: #a6063e;
+    font-size: 18px;
+}
+
+.haut {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    width: 90%;
+    margin: auto;
+    border-radius: 75px;
+    background-color: rgba(72, 93, 97, 0.85);
+    padding: 10px;
+}
+
+.back, .banhammer{
+    margin: auto auto auto 10px;
+}
+
+.write {
+    margin: auto 10px auto 0;
+}
+
+.small_blank {
+    height: 10px;
+    width: 10px;
+}
+
+.blank {
+    width: 100px;
+    height: 100px;
+}
+
+.search_bar {
+    float: left;
+    width: 300px;
+    height: 33px;
+}
+
+.review form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review form div {
+    margin: auto;
+}
+
+.review form div input[type="text"] {
+    width: 250px;
+    height: 25px;
+    margin: auto;
+}
+
+.review form input[type="submit"] {
+    width: max-content;
+    height: max-content;
+    padding: 5px 20px;
+    margin: auto;
+}
+
+.reply_review {
+    width: 90%;
+    margin: auto 0 auto auto
+}
+
+.specifications {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.rating {
+    margin: auto;
+}
+
+.star {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+#content_input {
+    text-align: initial;
+    width: 90%;
+    margin: auto auto auto auto;
+    height: 25vh;
+    resize: vertical;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: auto 30px auto auto;
+}
+
+.dropdown_content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+}
+
+.dropdown_content form button {
+    color: black;
+    padding: 5px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.dropdown_content form button a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.dropdown button:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.star_notation {
+    margin: auto auto auto 3%;
+}
+
+.post, .reply, .review {
+    background-color: rgba(49, 51, 56, 0.45);
+    padding: 2%;
+    border-radius: 25px;
+}
+
+.reply {
+    width: 90%;
+    margin: auto 0 auto auto;
+}
+
+.post_info, .reply_info {
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.post_banner,.reply_banner {
+    display: flex;
+    flex-direction: row;
+}
+
+.product_firm {
+    font-size: 23px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.author_date {
+    font-size: 18px;
+}
+
+.your_comment {
+    width: max-content;
+    margin: auto;
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.post_content, .reply_content {
+    text-align: left;
+    width: 80%;
+}
+
+.replies_button, .thread_button {
+    border-radius: 30px;
+    padding: 10px 30px;
+    background-color: rgba(132, 166, 255, 0.75);
+    width: max-content;
+    text-decoration: none;
+    margin: auto auto auto 1.5%;
+}
+
+.replies_button:hover, .thread_button:hover {
+    text-decoration: revert;
+    background-color: rgba(131, 156, 222, 0.9);
+}
+
+.thread_button {
+    margin: auto auto auto 8%;
+}
+
+ {
+    border: dashed red;
+}

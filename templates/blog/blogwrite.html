@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>OPtimise - BLOG</title>
+    <link rel="stylesheet" href="/static/blog/style.css">
+    <link rel="icon" href="/static/assets/icon.png">
+</head>
+<body>
+    <!-- barre latérale gauche -->
+
+    <div class="blog_body">
+        <div class="topmessage">
+            <img src="/static/assets/icon.png" alt="icone">
+            <p>Envie de partager un feedback sur un produit ? Rédigez un post !</p>
+        </div>
+
+        <p>Veillez à rester courtois et informatif sur notre blog.</p>
+
+        <div class="haut">
+            <a class="back" href="/blog"><button>
+                <img src="/static/blog/assets/left_arrow.png" alt="Retour au blog">
+            </button></a>
+            <form action="/blog/search" method="POST">
+                <label>
+                    <input class="search_bar" type="text" placeholder="Rechercher un mot-clé..." name="search_query">
+                </label>
+                <button type="submit"><img src="/static/blog/assets/rechercher.png" alt="Rechercher"></button>
+            </form>
+            <div class="small_blank"></div>
+        </div>
+
+        <div class="blank"></div>
+
+        <div class="review">
+            <form action="/blog/write" method="POST">
+                <div class="specifications">
+                    <div><label for="product">Nom complet du produit :</label>
+                        <input id="product" type="text" placeholder="Produit" name="product">
+                    </div>
+                    <div>
+                        <label for="firm">Nom complet de l'entreprise :</label>
+                        <input id="firm" type="text" placeholder="Entreprise" name="firm">
+                    </div>
+                    <div class="rating">
+                        <img id="star1" src="/static/blog/assets/star.png" alt="star1" class="star" onclick="changeStar(1)">
+                        <img id="star2" src="/static/blog/assets/star.png" alt="star2" class="star" onclick="changeStar(2)">
+                        <img id="star3" src="/static/blog/assets/star.png" alt="star3" class="star" onclick="changeStar(3)">
+                        <img id="star4" src="/static/blog/assets/star.png" alt="star4" class="star" onclick="changeStar(4)">
+                        <img id="star5" src="/static/blog/assets/star.png" alt="star5" class="star" onclick="changeStar(5)">
+                    </div>
+                    <div class="hidden">
+                        <label for="grade"></label>
+                        <input id="grade" type="number" name="grade" value="5">
+                    </div>
+                </div>
+                <div class="small_blank"></div>
+                <label for="content_input"></label>
+                <textarea id="content_input" name="content"
+                          placeholder="N'hésitez pas à détailler votre pensée ici !"></textarea>
+                <div class="small_blank"></div>
+                <label for="submit_post"></label>
+                <input id="submit_post" type="submit" value="Poster">
+            </form>
+        </div>
+    </div>
+
+<script>
+    function changeStar(i) {
+        function changeStarAux(j) {
+            if (j !== 0) {
+                let element = document.getElementById("star" + j)
+                if (element.src.endsWith("/static/blog/assets/empty_star.png")) {
+                    element.src = "/static/blog/assets/star.png";
+                } else {
+                    element.src = "/static/blog/assets/empty_star.png";
+                }
+                changeStarAux(j - 1)
+            }
+        }
+
+        // reset all stars first
+        for (let j = 1; j <= 5; j++) {
+            let element = document.getElementById("star" + j)
+            element.src = "/static/blog/assets/empty_star.png"
+        }
+
+        // then fill the stars that must be filled
+        changeStarAux(i)
+
+        // and finally update the grade given in the hidden input
+        document.getElementById("grade").value = i
+    }
+</script>
+
+</body>
+</html>

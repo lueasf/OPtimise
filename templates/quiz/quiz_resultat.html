@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static',filename='quiz/css/style.css') }}">
+        <title>Résultats</title>
+    </head>
+    <body>
+
+        <div id="content">
+            <header>
+                <img src="{{url_for('static',filename='quiz/images/logo.png') }}" alt="Logo de votre site" id="logo" />
+                <h1>OPtimise, Tout sur l'Obsolescence Programmée !</h1>
+            </header>
+            <main>
+    
+                <nav> <!--barre latérale gauche-->
+                    {% if name %}
+                        <div class='loggedinas'>
+                            <span>Logged in as <br><b>{{name}}</b></span>
+                            <a href='/logout'>Log out</a>
+                        </div>
+                    {% else %}
+                        <div class='loggedinas'>
+                            <a href='/login'><b>Log in</b></a>
+                            <a href='/signup'><b>Sign up</b></a>
+                        </div>
+                    {% endif %}
+                    <ul>
+                      <li><a href="/quiz">Quizz</a></li>
+                      <li><a href="/classement/entreprise">Classements</a></li>
+                      <li><a href="/blog">Blog</a></li>
+                      <li><a href="/marketplace">Shopping</a></li>
+                      <li><a href="/">Autre ressources</a></li>
+                    </ul>
+                  </nav>
+
+                <h1>Quiz</h1>
+            
+                <h2>Résultats</h2>
+                <p>Vous avez obtenu un score de {{score}}% !</p>
+                <p>Vous avez fait mieux que {{mieux}}% des gens !</p>
+                <br/>
+                
+                <h2>Et maintenant ?</h2>
+                <p>Vous avez terminé le quiz sur l'obsolescence programmée ! Vous pouvez recommencer via le lien ci-dessous 
+                pour essayer d'améliorer votre score, ou pour essayer un nombre différent de questions.</p>
+                <br/>
+
+                <footer>
+                    <div class="bottom-bar">
+                        <ul>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="aide.html">Aide</a></li>
+                            <li><a href="dons.html">Dons</a></li>
+                            <li><a href="vieprivee.html">Vie privée</a></li>
+                        </ul>
+                    </div>
+                    <p>&copy; 2023  Tous droits réservés.</p>
+                </footer>
+
+            </main>
+        </div>
+
+    </body>
+</html>

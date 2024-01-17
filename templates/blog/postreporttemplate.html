@@ -1,0 +1,31 @@
+<div class="blank"></div>
+
+<div class="post">
+    <div class="post_banner">
+        <div class="post_info">
+            <span class="sysmsg">Signalement d'un post par <!-- reporter --> :</span>
+            <div class="small_blank"></div>
+            <span class="product_firm">Review de '<!-- product -->', de '<!-- firm -->' :</span>
+            <span class="author_date">par <!-- author -->, le <!-- date --></span>
+        </div>
+        <div class="star_notation">
+            <!-- star notation here -->
+        </div>
+        <div class="dropdown">
+            <button onclick="drop(<!-- postid -->)" class="drop_button">
+                <img src="/static/blog/assets/hamburger.png" alt="hamburger.png">
+            </button>
+            <div id="hamburger-<!-- postid -->" class="dropdown_content">
+                <form>
+                    <button formaction="/blog" type="submit" name="action" value="report_ignore-<!-- postid -->" formmethod="POST">Ignorer</button>
+                    <button formaction="/blog" type="submit" name="action" value="report_delete-<!-- postid -->" formmethod="POST">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="post_content"><!-- content --></p>
+</div>
+
+<div class="small_blank"></div>
+
+<a class="<!-- replies button class -->" href="/blog/thread/<!-- postid -->">Voir les <!-- repliescount --> réponses</a>

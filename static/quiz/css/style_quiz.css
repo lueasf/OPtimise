@@ -1,0 +1,71 @@
+.loggedinas {
+    display: flex;
+    flex-direction: column;
+    margin: auto auto 10vh auto
+}
+
+.loggedinas span, .loggedinas a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(63, 106, 136, 0.4);
+    padding: 10px 3px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+    width: 90%;
+    text-align: center;
+}
+
+.loggedinas span:hover, .loggedinas a:hover {
+    background-color: #3f6f90d5;
+}
+
+.login_body {
+    margin-left: 220px; /* Ajustez la marge pour laisser de la place à la barre latérale */
+    margin-right: auto;
+    padding: 20px; /*pour espacer*/
+    display: flex;
+    flex-direction: column;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.main_box {
+    background-color: #ffffffaa;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+    border-radius: 40px;
+    width: fit-content;
+    margin: auto;
+    border: solid;
+    border-color: #3f6f90d5;
+}
+
+.main_box form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.main_box form label {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main_box form select option {
+    font-size: 20px;
+}
+
+.main_box form select {
+    height: 30px;
+    font-size: 20px;
+    color : rgb(54, 46, 159);
+}
+
+.main_box form button {
+    height: 30px;
+    font-size: 20px;
+    color : rgb(54, 46, 159);
+}

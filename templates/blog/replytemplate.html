@@ -1,0 +1,26 @@
+<div class="small_blank"></div>
+
+<div class="reply">
+    <div class="reply_banner">
+        <div class="reply_info">
+            <span class="author_date">par <!-- author -->, le <!-- date --></span>
+        </div>
+        <div class="dropdown">
+            <button onclick="drop(<!-- replyid -->)" class="drop_button">
+                <img src="/static/blog/assets/hamburger.png" alt="hamburger.png">
+            </button>
+            <div id="hamburger-<!-- replyid -->" class="dropdown_content">
+                <form>
+                    <button><a href="#add_reply">Commenter</a></button>
+                    <button formaction="/blog" type="submit" name="action"
+                            value="reply_report-<!-- postid -->-<!-- replyid -->" formmethod="POST">Signaler</button>
+                    <button formaction="/blog" type="submit" name="action"
+                            value="reply_delete-<!-- postid -->-<!-- replyid -->" formmethod="POST">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="reply_content"><!-- content --></p>
+</div>
+
+<div class="small_blank"></div>

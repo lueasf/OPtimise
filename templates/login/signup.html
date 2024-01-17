@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>OPtimise</title>
+    <link rel="stylesheet" href="/static/login/style.css">
+    <link rel="icon" href="/static/assets/icon.png">
+</head>
+
+<body>
+    <!-- barre latérale gauche -->
+
+    <div class="login_body">
+        <div class="topmessage">
+            <img src="/static/assets/icon.png" alt="icone">
+            <p>Inscrivez-vous sur OPtimise ci-dessous !</p>
+        </div>
+        <div class="blank"></div>
+        <div class="center">
+            <div class="slim">
+                <form action="/signup" method="POST">
+                    <div class="form_entry">
+                        <label for="Name">Choisissez un nom ou pseudonyme public :</label>
+                        <input type="text" id="Name" placeholder="Votre nom ou pseudonyme" name="name">
+                    </div>
+                    <div class="form_entry">
+                        <label for="Password1">Choisissez un mot de passe :</label>
+                        <input type="password" id="Password1" placeholder="Votre mot de passe" name="password1">
+                    </div>
+                    <div class="form_entry">
+                        <label for="Password2">Confirmez votre mot de passe :</label>
+                        <input type="password" id="Password2" placeholder="Répétez votre mot de passe" name="password2">
+                    </div>
+                    <div class="form_entry">
+                        <input type="submit" value="Créer mon compte !">
+                    </div>
+                </form>
+
+                <!-- errmsg -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
