@@ -1,6 +1,9 @@
 # OPtimise
 OPtimise est un projet de groupe réalisé en école.
 
+Nous avons réalisé notre application web sur un gitlab privée, 
+j'ai décidé de mettre le code sur mon github pour y avoir accès plus facilement. 
+
 # Contexte du projet
 Ce rapport rend compte du Projet Pluridisciplinaire d’Infor
 -matique Intégrative dans le cadre de la première année
